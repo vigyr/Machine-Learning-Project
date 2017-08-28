@@ -1,0 +1,3 @@
+SELECT ACTIVITY,NAME, CAST(count(VIOLATION_CODE) AS DOUBLE) as Total_violations,grade, CAST(score as DOUBLE) as label, CAST(sum(points) as DOUBLE) as Violation_points 
+FROM rest_vio 
+where score >= '65' group by NAME,ACTIVITY,grade,score
